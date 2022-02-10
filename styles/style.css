@@ -55,6 +55,9 @@
 
 .link {
   text-decoration:none;
+}
+
+.header__link {
   color: #2f80ed;
 }
 
@@ -86,7 +89,7 @@
   margin-bottom: 100px;
 }
 
-.description__two-columns {
+.two-columns {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -185,6 +188,8 @@
   background-color: #f2f2f2;
   position: relative;
   padding-top: 100px;
+  display: flex;
+  flex-direction: column;
 }
 
 .feynman__title {
@@ -195,8 +200,6 @@
   font-weight: bold;
   margin: 0 auto 70px;
   z-index: 2;
-  position: relative;
-  /* если я убираю position: relative;, то у меня рисунок начинает находить на текст, несмотря на то, что у заголовка и подзаголовка z-index больше */
 }
 
 .feynman__subtitle {
@@ -205,7 +208,6 @@
   line-height: 51px;
   font-weight: normal;
   z-index: 2;
-  position: relative;
   margin: 0 auto;
   }
 
@@ -214,10 +216,10 @@
   font-size: 36px;
   line-height: 51px;
   font-weight: normal;
-  top: 419.5px;
+  top: 50%;
   right: 48px;
   z-index: 2;
-/*из-за паддингов ссылка смещается вниз. единственный способ, который я нашла - вычислить середину и задать размер вручную*/
+  color: #2f80ed;
 }
 
 .feynman__illustration {
@@ -226,33 +228,33 @@
   bottom: 0;
   width: 867px;
   height: 637px;
-  z-index: 1;
 }
 
 .kaufman {
   background-color: #1f1f1f;
   padding: 90px 0;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   overflow: hidden;
 }
 
 .section-title_theme_dark {
   margin-top: 0;
   color: white;
-  z-index: 3;
+  z-index: 2;
 }
 
 .section-subtitle_theme_dark {
   color: white;
-  z-index: 3;
+  z-index: 2;
 }
 
 
 .table_theme_dark {
-  z-index: 3;
+  z-index: 2;
   margin-bottom: 0;
-  position: relative;
-  /* и здесь так же, если убираю relative, то треугольник заходит на таблицу*/
 }
 
 /* и элемента с модификатором вида ключ-значение */
@@ -281,7 +283,6 @@
   background-image: url(../images/kaufman-triangle.svg);
   background-size: cover;
   background-position: center;
-  z-index: 2;
 }
 
 .footer {
@@ -334,7 +335,7 @@
   font-weight: bold;
 }
 
-.footer__column-links {
+.footer__list {
   list-style: none;
   padding: 0;
   margin: 0 auto 16px;
@@ -346,7 +347,6 @@
 }
 
 .footer__column-link {
-  text-decoration:none;
   font-weight: normal;
   color: white;
 }
